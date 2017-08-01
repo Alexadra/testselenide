@@ -9,7 +9,7 @@ public class DataProperties {
 
     static {
 	PROPERTIES = new Properties();
-	URL props = ClassLoader.getSystemResource("data.properties");
+	URL props = ClassLoader.getSystemResource("resources/data.properties");
 	try {
 	    PROPERTIES.load(props.openStream());
 	} catch (IOException e) {

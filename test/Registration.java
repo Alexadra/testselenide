@@ -11,8 +11,6 @@ public class Registration {
 
 	@Test
 	public void validRegister() throws InterruptedException{
-		System.setProperty("webdriver.gecko.driver", "D:\\Oleksandra\\selenide_docs\\geckodriver.exe");
-		Configuration.browser="gecko";
 		open("https://www.musto.com/");
 		$(".ui-dialog-titlebar-close").click();
 		$(By.xpath("(//a[@class='b-user_info-link b-user_info-register'])[2]")).click();
