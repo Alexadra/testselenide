@@ -1,4 +1,4 @@
-package  Pages;
+package main.pages;
 
 import java.util.Properties;
 import java.io.IOException;
@@ -9,7 +9,7 @@ public class DataProperties {
 
     static {
 	PROPERTIES = new Properties();
-	URL props = ClassLoader.getSystemResource("resources/data.properties");
+	URL props = ClassLoader.getSystemResource("main/resources/data.properties");
 	try {
 	    PROPERTIES.load(props.openStream());
 	} catch (IOException e) {

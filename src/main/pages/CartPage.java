@@ -1,4 +1,4 @@
-package Pages;
+package main.pages;
 
 public class CartPage {
 
