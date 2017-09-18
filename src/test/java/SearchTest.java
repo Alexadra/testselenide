@@ -6,25 +6,29 @@ import main.java.CartPage;
 import main.java.DataProperties;
 import main.java.PDPage;
 import main.java.PLPage;
+import main.java.SearchPage;
 
 
-public class AddToCartTest extends BaseClass {
+public class SearchTest extends BaseClass {
 
-	@Test
-	public void variationAddtoCartPDP(){
-		LOG.info("_____variationAddtoCart()_____");
-		PDPage pdp = new PDPage();
-		pdp.openPDP(DataProperties.get("variableUrl"));
+	/*@Test
+	public void searchByName(){
+		LOG.info("_____variationAddToCartQuickPLP()_____");
+		SearchPage search = new SearchPage();
+		search.findBy(DataProperties.get("searchName"));
 		avoidShipPopup();
 		avoidCookieInfo();
-		String productId = pdp.getProductId();
-		pdp.selectSize();
-		CartPage cart = pdp.addToCart();
+		plp.clickQuickBuyVar();
+		String productId = plp.getQuickProductId();
+		plp.selectSizeQuick();
+		plp.setQtyQuick();
+		CartPage cart = plp.addToCartQuick();
 		cart.isMiniCartVisible();
 		cart.goToCart();
 		cart.isProductPresent(productId);
-	}
+	}*/
 	
+	/*
 	@Test
 	public void variationAddToCartQuickPLP(){
 		LOG.info("_____variationAddToCartQuickPLP()_____");
@@ -90,4 +94,5 @@ public class AddToCartTest extends BaseClass {
 		cart.goToCart();
 		cart.isProductPresent(productId);
 	}
+	*/
 }

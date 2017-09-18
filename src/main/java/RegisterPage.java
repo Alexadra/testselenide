@@ -1,9 +1,11 @@
-package main.pages;
+package main.java;
 
 import static com.codeborne.selenide.Selenide.*;
 import org.openqa.selenium.By;
+
+import main.java.DataProperties;
+
 import static com.codeborne.selenide.Condition.*;
-import main.pages.DataProperties;
 
 public class RegisterPage {
 	String url = DataProperties.get("url");
@@ -19,15 +21,15 @@ public class RegisterPage {
 		By submitRegister = By.cssSelector(".password");
 	 //========================================================LOCATORS==========================================================================
 	
-	public MyAccountPage registrationPost() {
+	public MyAccountPage registrationPost(String title, String name, String lastname, String email, String password) {
 		$(registerForm).shouldBe(visible);
-		$(titleDropdown).selectOption("Mrs");
-		$(firstnameField).sendKeys("1FirstName");
-		$(lastnameField).sendKeys("1LastName");
-		$(emailField).sendKeys("erer111@test.com");
-		$(emailConfirmField).sendKeys("erer111@test.com");
-		$$(passField).get(0).sendKeys("12345678");
-		$$(passField).get(1).sendKeys("12345678");
+		$(titleDropdown).selectOption(title);
+		$(firstnameField).sendKeys(name);
+		$(lastnameField).sendKeys(lastname);
+		$(emailField).sendKeys(email);
+		$(emailConfirmField).sendKeys(email);
+		$$(passField).get(0).sendKeys(password);
+		$$(passField).get(1).sendKeys(password);
 		$(submitRegister).click();
 		return page(MyAccountPage.class);
 		

@@ -1,9 +1,11 @@
-package main.pages;
+package main.java;
 
 import static com.codeborne.selenide.Selenide.*;
 import org.openqa.selenium.By;
+
+import main.java.DataProperties;
+
 import static com.codeborne.selenide.Condition.*;
-import main.pages.DataProperties;
 
 public class LoginPage {
 	String url = DataProperties.get("url");

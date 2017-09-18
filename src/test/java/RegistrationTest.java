@@ -1,10 +1,11 @@
 package test.java;
 import org.junit.Test;
 
-import main.pages.BaseClass;
-import main.pages.HomePage;
-import main.pages.MyAccountPage;
-import main.pages.RegisterPage;
+import main.java.BaseClass;
+import main.java.DataProperties;
+import main.java.HomePage;
+import main.java.MyAccountPage;
+import main.java.RegisterPage;
 
 public class RegistrationTest extends BaseClass {
 
@@ -15,7 +16,8 @@ public class RegistrationTest extends BaseClass {
 		home.openHome();
 		home.openLoginPopup();
 		RegisterPage register = home.goToRegister();
-		MyAccountPage myAccount = register.registrationPost();
+		MyAccountPage myAccount = register.registrationPost(DataProperties.get("title"), DataProperties.get("name"), 
+				DataProperties.get("lastname"), DataProperties.get("email"), DataProperties.get("password"));
 		myAccount.isLogoutPresent();
 	}
 

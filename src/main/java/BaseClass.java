@@ -1,4 +1,4 @@
-package main.pages;
+package main.java;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -27,10 +27,12 @@ public class BaseClass {
 	}
 
 	public void avoidShipPopup(){
+		if ($(popupShipClose).isDisplayed())
 		$(popupShipClose).click();
 	}
 	
 	public void avoidCookieInfo(){
+		if ($(cookieClose).isDisplayed())
 		$(cookieClose).click();
 	}
 }

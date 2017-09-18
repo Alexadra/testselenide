@@ -1,4 +1,4 @@
-package main.pages;
+package main.java;
 
 import java.util.Properties;
 import java.io.IOException;

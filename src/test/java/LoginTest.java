@@ -1,7 +1,10 @@
 package test.java;
 import org.junit.Test;
-import main.pages.BaseClass;
-import main.pages.HomePage;
+
+import main.java.BaseClass;
+import main.java.DataProperties;
+import main.java.HomePage;
+import main.java.MyAccountPage;
 
 
 
@@ -13,6 +16,7 @@ public class LoginTest extends BaseClass {
 		HomePage home = new HomePage();
 		home.openHome();
 		home.openLoginPopup();
-		home.loginPost();
+		MyAccountPage myaccount = home.loginPost(DataProperties.get("loginEmail"), DataProperties.get("loginPass"));
+		myaccount.isLogoutPresent();
 	}
 }

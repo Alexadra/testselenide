@@ -1,9 +1,11 @@
-package main.pages;
+package main.java;
 
 import static com.codeborne.selenide.Selenide.*;
 import org.openqa.selenium.By;
+
+import main.java.DataProperties;
+
 import static com.codeborne.selenide.Condition.*;
-import main.pages.DataProperties;
 
 public class PDPage {
 	String url = DataProperties.get("url");
@@ -15,8 +17,8 @@ public class PDPage {
 		By miniCartList = By.cssSelector(".b-minicart-products");
 	 //========================================================LOCATORS==========================================================================
 	
-	public PDPage openPDP() {
-		open(url+DataProperties.get("variableUrl"));
+	public PDPage openPDP(String pdpurl) {
+		open(url+pdpurl);
 		return page(PDPage.class);
 	}
 	
@@ -30,10 +32,14 @@ public class PDPage {
 		return page(PDPage.class);
 	}
 	
-	public PDPage addToCart() {
+	public CartPage addToCart() {
 		$(addToCart).click();
-		$(miniCartList).shouldBe(visible);
-		return page(PDPage.class);
+		return page(CartPage.class);
+	}
+
+	public String getProductId() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

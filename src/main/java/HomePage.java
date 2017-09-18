@@ -1,11 +1,11 @@
-package main.pages;
+package main.java;
 
 import static com.codeborne.selenide.Selenide.*;
 import org.openqa.selenium.By;
-import static com.codeborne.selenide.Condition.*;
-import main.pages.DataProperties;
 
-public class MyAccountPage {
+import main.java.DataProperties;
+
+public class HomePage {
 	String url = DataProperties.get("url");
 	
 	 //========================================================LOCATORS==========================================================================
@@ -14,14 +14,33 @@ public class MyAccountPage {
 		By addToCart = By.id("add-to-cart");
 		By miniCartList = By.cssSelector(".b-minicart-products");
 		By loginPopup = By.cssSelector(".ui-dialog-titlebar-close");
+		By registerLink = By.xpath("(//a[@class='b-user_info-link b-user_info-register'])[2]");
+		By loginEmail = By.cssSelector("");
+		By loginPassword = By.cssSelector("");
+		By loginSubmit = By.cssSelector("");
 	 //========================================================LOCATORS==========================================================================
 	
-	public MyAccountPage isLogoutPresent() {
-		$(".b-user_info-panel-link_logout").should(exist);
+	public HomePage openHome() {
+		open(url);
+		return page(HomePage.class);
+	}
+
+	public HomePage openLoginPopup() {
+		$(loginPopup).click();
+		return page(HomePage.class);
+	}
+
+	public MyAccountPage loginPost(String email, String password) {
+		$(loginEmail).sendKeys(email);
+		$(loginPassword).sendKeys(password);
+		$(loginSubmit).click();
 		return page(MyAccountPage.class);
 		
 	}
-
-
+	
+	public RegisterPage goToRegister() {
+		$(registerLink).click();
+		return page(RegisterPage.class);
+	}
 
 }

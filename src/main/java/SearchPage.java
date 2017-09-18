@@ -1,10 +1,11 @@
-package main.pages;
+package main.java;
 
 import static com.codeborne.selenide.Selenide.*;
 import org.openqa.selenium.By;
-import main.pages.DataProperties;
 
-public class HomePage {
+import main.java.DataProperties;
+
+public class SearchPage {
 	String url = DataProperties.get("url");
 	
 	 //========================================================LOCATORS==========================================================================
@@ -15,25 +16,13 @@ public class HomePage {
 		By loginPopup = By.cssSelector(".ui-dialog-titlebar-close");
 		By registerLink = By.xpath("(//a[@class='b-user_info-link b-user_info-register'])[2]");
 		By loginEmail = By.cssSelector("");
+		By loginPassword = By.cssSelector("");
+		By loginSubmit = By.cssSelector("");
 	 //========================================================LOCATORS==========================================================================
-	
-	public HomePage openHome() {
-		open(url);
-		return page(HomePage.class);
-	}
 
-	public HomePage openLoginPopup() {
-		$(loginPopup).click();
-		return page(HomePage.class);
-	}
-
-	public void loginPost() {
-		$(loginEmail).sendKeys("");
-	}
-	
-	public RegisterPage goToRegister() {
-		$(registerLink).click();
-		return page(RegisterPage.class);
+	public void findBy(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
