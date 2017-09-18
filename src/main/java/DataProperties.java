@@ -9,7 +9,13 @@ public class DataProperties {
 
     static {
 	PROPERTIES = new Properties();
-	URL props = ClassLoader.getSystemResource("main/resources/data.properties");
+	URL props;
+	
+	String os = System.getProperty("os.name").toLowerCase();
+	if (os.contains("win")) 
+		props = ClassLoader.getSystemResource("main/resources/data.properties");
+	else
+		props = ClassLoader.getSystemResource("main\\resources\\data.properties");
 	try {
 	    PROPERTIES.load(props.openStream());
 	} catch (IOException e) {
@@ -25,5 +31,6 @@ public class DataProperties {
 	//just to use short name
 	return getProperty(key);
     }
+    	
 
 }
