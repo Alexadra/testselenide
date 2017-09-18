@@ -15,7 +15,7 @@ public class DataProperties {
 	if (os.contains("win")) 
 		props = ClassLoader.getSystemResource("main/resources/data.properties");
 	else
-		props = ClassLoader.getSystemResource("main\\resources\\data.properties");
+		props = ClassLoader.getSystemResource("data.properties");
 	try {
 	    PROPERTIES.load(props.openStream());
 	} catch (IOException e) {
