@@ -8,15 +8,13 @@ import org.slf4j.LoggerFactory;
 
 import com.codeborne.selenide.Configuration;
 
-import test.java.LoginTest;
-
 public class BaseClass {
 	 //========================================================LOCATORS==========================================================================
 		By popupShipClose = By.cssSelector(".ui-dialog-titlebar-close");
 		By cookieClose = By.cssSelector(".b-cookies_notice-content-close");
 	 //========================================================LOCATORS==========================================================================
 	
-	public static Logger LOG = LoggerFactory.getLogger(LoginTest.class);
+	public static Logger LOG = LoggerFactory.getLogger(BaseClass.class);
 	
 	public BaseClass(){
 	System.setProperty("webdriver.gecko.driver", "D:\\selenide_docs\\geckodriver.exe");

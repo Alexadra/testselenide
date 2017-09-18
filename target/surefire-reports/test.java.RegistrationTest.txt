@@ -2,16 +2,17 @@
 Test set: test.java.RegistrationTest
 -------------------------------------------------------------------------------
 Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.001 sec <<< FAILURE!
-validRegister(test.java.RegistrationTest)  Time elapsed: 0 sec  <<< ERROR!
+validRegister(test.java.RegistrationTest)  Time elapsed: 0.001 sec  <<< ERROR!
 org.openqa.selenium.SessionNotCreatedException: Tried to run command without establishing a connection
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'OZHMURKO-NB', ip: '192.168.183.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 selenide.url: https://www.musto.com
-Capabilities [{moz:profile=C:\Users\O80E2~1.ZHM\AppData\Local\Temp\rust_mozprofile.Vm4sikWU8TJr, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.3, platformVersion=10.0, moz:processID=6088.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Capabilities [{moz:profile=C:\Users\O80E2~1.ZHM\AppData\Local\Temp\rust_mozprofile.55ElWOuxHJHn, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.3, platformVersion=10.0, moz:processID=14736.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
 selenide.baseUrl: http://localhost:8080
-Session ID: fbb33f80-3bf2-4c74-becb-e626158e99c8
-	at sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+Session ID: 41a0ee51-e4c5-4e3e-a960-8d394cbcefff
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
