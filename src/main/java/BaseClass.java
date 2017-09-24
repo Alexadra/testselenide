@@ -23,7 +23,7 @@ public class BaseClass {
 			System.setProperty("webdriver.chrome.driver", "D:\\Oleksandra\\testein\\chrome-win-x64-latest.exe");
 		 else 
 			//System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver");
-			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "src/main/resources/new/chromedriver");
 		
 			 //Configuration.browser="gecko";
 			 Configuration.browser="Chrome";
