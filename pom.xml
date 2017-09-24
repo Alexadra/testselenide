@@ -11,6 +11,12 @@
   		<artifactId>selenide</artifactId>
   		<version>4.5.1</version>
   	</dependency>
+  	<dependency>
+  		<groupId>org.slf4j</groupId>
+  		<artifactId>slf4j-log4j12</artifactId>
+  		<version>1.7.22</version>
+  		<scope>test</scope>
+  	</dependency>
   </dependencies>
   <build>
 		<plugins>

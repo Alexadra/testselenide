@@ -18,15 +18,20 @@ public class BaseClass {
 	
 	public BaseClass(){
 		String os = System.getProperty("os.name").toLowerCase();
-		if (os.contains("win")) 
-			//System.setProperty("webdriver.gecko.driver", "D:\\selenide_docs\\geckodriver.exe");
-			System.setProperty("webdriver.chrome.driver", "D:\\Oleksandra\\testein\\chrome-win-x64-latest.exe");
-		 else 
-			//System.setProperty("webdriver.gecko.driver", "src/main/resources/new/geckodriver");
-			System.setProperty("webdriver.chrome.driver", "src/main/resources/new/chromedriver");
 		
-			 //Configuration.browser="gecko";
-			 Configuration.browser="Chrome";
+		if (os.contains("win")) {
+			System.setProperty("webdriver.gecko.driver", "D:\\selenide_docs\\geckodriver.exe");
+			Configuration.browser="gecko";
+			//System.setProperty("webdriver.chrome.driver", "D:\\Oleksandra\\testein\\chrome-win-x64-latest.exe");
+			
+		}
+		 else {
+			//System.setProperty("webdriver.gecko.driver", "src/main/resources/new/geckodriver");
+			//Configuration.browser="gecko";
+			System.setProperty("webdriver.chrome.driver", "src/main/resources/new/chromedriver");
+			Configuration.browser="Chrome";
+		 }
+		LOG.info(os+": os started");
 	}
 
 	public void avoidShipPopup(){
