@@ -1,3 +1,4 @@
 /target/
 /src/main/resources/gitignor/chromedriver
 /src/main/resources/gitignor/geckodriver
+/src/main/resources/gitignor/
