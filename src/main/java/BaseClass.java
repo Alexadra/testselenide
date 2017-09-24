@@ -25,8 +25,8 @@ public class BaseClass {
 			System.setProperty("webdriver.gecko.driver", "src/main/resources/new/geckodriver");
 			//System.setProperty("webdriver.chrome.driver", "src/main/resources/new/chromedriver");
 		
-			 //Configuration.browser="gecko";
-			 Configuration.browser="Chrome";
+			 Configuration.browser="gecko";
+			 //Configuration.browser="Chrome";
 	}
 
 	public void avoidShipPopup(){
